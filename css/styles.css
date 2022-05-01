@@ -199,8 +199,6 @@ img {
 .hero-button {
   height: 50px;
   width: 200px;
-  /* margin-left: auto;
-  margin-right: auto; */
   color: var(--text-white-color);
   background-color: var(--acccent-text-color);
   font-family: "Roboto";
@@ -209,14 +207,11 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
-  /* padding: 10px 32px; */
   text-align: center;
   border: 1px transparent;
   margin-top: 30px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  
-  
 }
 
 .hero-button:hover,
@@ -541,9 +536,12 @@ img {
   margin-left: 12px;
   text-align:center;
   border: 1px transparent;
-  
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.btn-subscribe:hover,
+.btn-subscribe:focus{
+  background-color: var(--bkg-hover-btn-hero);
 }
 
 /* portfolio */
@@ -761,15 +759,15 @@ margin-bottom: 10px;
 }
 
 .input-text:focus+.form-icon {
-  fill: #2196f3;
+  fill: var(--acccent-text-color);
 }
 
 .input-text{
-  
   height: 40px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon{
@@ -777,6 +775,7 @@ margin-bottom: 10px;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-coment:focus {
  outline:1px solid var(--acccent-text-color);
@@ -791,6 +790,7 @@ margin-bottom: 10px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-coment::placeholder{
   font-size: 12px;
@@ -814,20 +814,30 @@ margin-bottom: 10px;
   line-height:1.71;
   color: var(--acccent-text-color);
 }
-
+.form-link:hover{
+  text-decoration: none;
+}
 
 .visually-hidden{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  /* width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; */
 }
 
 .checkbox-agree{
   position: absolute;
-  margin-right: 7px;
+  /* margin-right: 7px;
   width: 16px;
-  height: 15px;
+  height: 15px; */
 }
+
 
 .castom-check{
   margin-right: 7px;
@@ -837,6 +847,7 @@ margin-bottom: 10px;
   border: 2px solid var(--primery-text-color); 
 }
 
+
 .checkbox-agree:checked +.castom-check{
 background-color: var(--acccent-text-color);
 border-color: transparent;
@@ -844,6 +855,10 @@ background-origin:content-box ;
 background-image: url(../images/check.svg);
 background-size: contain;
 background-repeat: no-repeat;
+}
+.checkbox-agree:focus +.castom-check {
+ box-shadow: 0px 0px 1px 1px rgba(96, 93, 93,0.8);
+
 }
 .send-button{
   display: flex;
